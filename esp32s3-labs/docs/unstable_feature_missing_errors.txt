@@ -1,0 +1,28 @@
+error[E0432]: unresolved imports `esp_hal::analog::adc::Adc`, `esp_hal::analog::adc::AdcCalCurve`, `esp_hal::analog::adc::AdcConfig`
+  --> src/bin/neg_lab04_adc_needs_unstable.rs:13:19
+   |
+13 |     analog::adc::{Adc, AdcCalCurve, AdcConfig, Attenuation},
+   |                   ^^^  ^^^^^^^^^^^  ^^^^^^^^^ no `AdcConfig` in `analog::adc`
+   |                   |    |
+   |                   |    no `AdcCalCurve` in `analog::adc`
+   |                   no `Adc` in `analog::adc`
+   |
+help: a similar name exists in the module
+   |
+13 -     analog::adc::{Adc, AdcCalCurve, AdcConfig, Attenuation},
+13 +     analog::adc::{Adc, AdcCalSource, AdcConfig, Attenuation},
+   |
+error[E0603]: module `analog` is private
+   --> src/bin/neg_lab04_adc_needs_unstable.rs:13:5
+    |
+ 13 |     analog::adc::{Adc, AdcCalCurve, AdcConfig, Attenuation},
+    |     ^^^^^^  --- module `adc` is not publicly re-exported
+    |     |
+    |     private module
+    |
+note: the module `analog` is defined here
+   --> /home/claude/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/esp-hal-1.1.1/src/lib.rs:236:13
+    |
+236 |               pub(crate) mod $module;
+    |               ^^^^^^^^^^^^^^^^^^^^^^^
+...

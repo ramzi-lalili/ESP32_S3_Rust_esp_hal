@@ -1,0 +1,26 @@
+[package]
+name = "esp32s3-lab"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.88"
+
+[lib]
+name = "esp32s3_lab"
+path = "src/lib.rs"
+
+[dependencies]
+esp-hal = { version = "=1.1.1", features = ["esp32s3", "unstable"] }
+esp-bootloader-esp-idf = { version = "0.5.0", features = ["esp32s3"] }
+esp-backtrace = { version = "0.19", features = ["esp32s3", "panic-handler", "println"] }
+esp-println = { version = "0.17", features = ["esp32s3"] }
+critical-section = "1"
+nb = "1"
+
+[profile.dev]
+opt-level = "s"        # debug builds are too slow for timing-sensitive peripherals
+
+[profile.release]
+opt-level = "s"
+lto = "fat"
+codegen-units = 1
+debug = 2

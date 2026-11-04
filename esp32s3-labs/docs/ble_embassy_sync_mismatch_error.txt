@@ -1,0 +1,22 @@
+   Compiling esp32s3-labs v0.1.0 (/home/claude/esp32s3-labs)
+error[E0277]: the trait bound `NoopRawMutex: embassy_sync::blocking_mutex::raw::RawMutex` is not satisfied
+   --> src/bin/lab21_ble.rs:208:65
+    |
+208 |     let conn = advertiser.accept().await?.with_attribute_server(server)?;
+    |                                           --------------------- ^^^^^^ the trait `embassy_sync::blocking_mutex::raw::RawMutex` is not implemented for `NoopRawMutex`
+    |                                           |
+    |                                           required by a bound introduced by this call
+    |
+note: there are multiple different versions of crate `embassy_sync` in the dependency graph
+   --> /home/claude/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/embassy-sync-0.7.2/src/blocking_mutex/raw.rs:25:1
+    |
+ 25 | pub unsafe trait RawMutex {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^ this is the expected trait
+    |
+   ::: /home/claude/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/embassy-sync-0.8.0/src/blocking_mutex/raw.rs:25:1
+    |
+ 25 | pub unsafe trait RawMutex {
+    | ------------------------- this is the found trait
+    = help: you can use `cargo tree` to explore your dependency tree
+help: the following other types implement trait `embassy_sync::blocking_mutex::raw::RawMutex`
+   --> /home/claude/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/embassy-sync-0.7.2/src/blocking_mutex/raw.rs:54:1

@@ -1,0 +1,295 @@
+=== BUILD lab01_gpio_output
+    Updating crates.io index
+     Locking 129 packages to latest Rust 1.88 compatible versions
+      Adding esp-backtrace v0.19.0 (available: v0.20.0, requires Rust 1.95.0)
+      Adding esp-bootloader-esp-idf v0.5.0 (available: v0.6.0, requires Rust 1.95.0)
+      Adding esp-hal v1.1.1 (available: v1.1.2)
+      Adding esp-println v0.17.0 (available: v0.18.0, requires Rust 1.95.0)
+      Adding esp-rom-sys v0.1.4 (available: v0.1.5, requires Rust 1.95.0)
+   Compiling compiler_builtins v0.1.160 (/home/claude/esp-rust/lib/rustlib/src/rust/library/compiler-builtins/compiler-builtins)
+   Compiling core v0.0.0 (/home/claude/esp-rust/lib/rustlib/src/rust/library/core)
+   Compiling alloc v0.0.0 (/home/claude/esp-rust/lib/rustlib/src/rust/library/alloc)
+   Compiling proc-macro2 v1.0.107
+   Compiling unicode-ident v1.0.27
+   Compiling quote v1.0.47
+   Compiling litrs v1.0.1
+   Compiling esp-metadata-generated v0.4.0
+   Compiling document-features v0.2.12
+   Compiling syn v3.0.9
+   Compiling hashbrown v0.17.1
+   Compiling equivalent v1.0.3
+   Compiling indexmap v2.14.2
+   Compiling serde_core v1.0.229
+   Compiling syn v2.0.119
+   Compiling byteorder v1.5.0
+   Compiling serde v1.0.229
+   Compiling hash32 v0.3.1
+   Compiling serde_derive v1.0.229
+   Compiling critical-section v1.2.0
+   Compiling stable_deref_trait v1.2.1
+   Compiling cfg-if v1.0.5
+   Compiling ryu v1.0.23
+   Compiling itoa v1.0.18
+   Compiling somni-parser v0.2.2
+   Compiling unsafe-libyaml v0.2.11
+   Compiling serde_yaml v0.9.34+deprecated
+   Compiling somni-expr v0.2.0
+   Compiling futures-core v0.3.34
+   Compiling heapless v0.8.0
+   Compiling ident_case v1.0.1
+   Compiling embedded-io-async v0.6.1
+   Compiling esp-config v0.7.0
+   Compiling embedded-io v0.6.1
+   Compiling futures-sink v0.3.34
+   Compiling embedded-io v0.7.1
+   Compiling portable-atomic v1.15.0
+   Compiling heapless v0.9.3
+   Compiling embedded-io-async v0.7.0
+   Compiling embassy-sync v0.8.0
+   Compiling esp-rom-sys v0.1.4
+   Compiling nb v1.1.0
+   Compiling futures-task v0.3.34
+   Compiling pin-project-lite v0.2.17
+   Compiling embassy-sync v0.7.2
+   Compiling winnow v1.0.4
+   Compiling embassy-sync v0.6.2
+   Compiling fnv v1.0.7
+   Compiling log v0.4.35
+   Compiling esp-println v0.17.0
+   Compiling darling_core v0.21.3
+   Compiling toml_parser v1.1.5+spec-1.1.0
+   Compiling futures-util v0.3.34
+   Compiling nb v0.1.3
+   Compiling xtensa-lx v0.13.0
+   Compiling esp-sync v0.2.1
+   Compiling void v1.0.2
+   Compiling vcell v0.1.3
+   Compiling toml_datetime v1.1.2+spec-1.1.0
+   Compiling embassy-time-driver v0.2.2
+   Compiling strsim v0.11.1
+   Compiling embedded-hal-async v1.0.0
+   Compiling esp32s3 v0.35.2
+   Compiling object v0.37.3
+   Compiling darling_core v0.24.1
+   Compiling toml_edit v0.25.17+spec-1.1.0
+   Compiling embedded-hal v0.2.7
+   Compiling darling_macro v0.21.3
+   Compiling embedded-hal v1.0.0
+   Compiling xtensa-lx-rt v0.22.0
+   Compiling heck v0.5.0
+   Compiling jiff-core v0.1.1
+   Compiling memchr v2.8.3
+   Compiling jiff v0.2.38
+   Compiling strum_macros v0.27.2
+   Compiling darling v0.21.3
+   Compiling proc-macro-crate v3.5.0
+   Compiling darling_macro v0.24.1
+   Compiling esp-synopsys-usb-otg v0.4.2
+   Compiling paste v1.0.15
+   Compiling termcolor v1.4.1
+   Compiling esp-hal-procmacros v0.22.0
+   Compiling darling v0.24.1
+   Compiling embassy-time v0.5.1
+   Compiling enumset_derive v0.15.1
+   Compiling strum v0.27.2
+   Compiling esp-bootloader-esp-idf v0.5.0
+   Compiling usb-device v0.3.2
+   Compiling embassy-usb-driver v0.2.2
+   Compiling esp-hal v1.1.1
+   Compiling esp-backtrace v0.19.0
+   Compiling xtensa-lx-rt-proc-macros v0.5.0
+   Compiling bitfield-macros v0.19.5
+   Compiling gcd v2.3.0
+   Compiling ral-registers v0.1.3
+   Compiling indoc v2.0.8
+   Compiling instability v0.3.14
+   Compiling fugit v0.3.9
+   Compiling bitfield v0.19.5
+   Compiling embassy-usb-synopsys-otg v0.3.3
+   Compiling enumset v1.1.15
+   Compiling delegate v0.13.5
+   Compiling embassy-futures v0.1.2
+   Compiling bitflags v2.13.2
+   Compiling embedded-storage v0.3.2
+   Compiling bytemuck v1.25.2
+   Compiling esp32s3-labs v0.1.0 (/home/claude/stable-check)
+    Finished `release` profile [optimized + debuginfo] target(s) in 3m 03s
+=== RESULT lab01_gpio_output EXIT:0
+=== BUILD lab02_gpio_input
+   Compiling esp32s3-labs v0.1.0 (/home/claude/stable-check)
+    Finished `release` profile [optimized + debuginfo] target(s) in 1.84s
+=== RESULT lab02_gpio_input EXIT:0
+=== BUILD lab03_cpu_clock
+   Compiling esp32s3-labs v0.1.0 (/home/claude/stable-check)
+    Finished `release` profile [optimized + debuginfo] target(s) in 1.80s
+=== RESULT lab03_cpu_clock EXIT:0
+=== BUILD lab09_uart
+   Compiling esp32s3-labs v0.1.0 (/home/claude/stable-check)
+    Finished `release` profile [optimized + debuginfo] target(s) in 2.14s
+=== RESULT lab09_uart EXIT:0
+=== BUILD lab10_i2c_scan
+   Compiling esp32s3-labs v0.1.0 (/home/claude/stable-check)
+    Finished `release` profile [optimized + debuginfo] target(s) in 2.04s
+=== RESULT lab10_i2c_scan EXIT:0
+=== BUILD lab12_spi
+   Compiling esp32s3-labs v0.1.0 (/home/claude/stable-check)
+    Finished `release` profile [optimized + debuginfo] target(s) in 2.06s
+=== RESULT lab12_spi EXIT:0
+=== BUILD neg_lab04_adc_needs_unstable
+   Compiling esp32s3-labs v0.1.0 (/home/claude/stable-check)
+error[E0432]: unresolved imports `esp_hal::analog::adc::Adc`, `esp_hal::analog::adc::AdcCalCurve`, `esp_hal::analog::adc::AdcConfig`
+  --> src/bin/neg_lab04_adc_needs_unstable.rs:13:19
+   |
+13 |     analog::adc::{Adc, AdcCalCurve, AdcConfig, Attenuation},
+   |                   ^^^  ^^^^^^^^^^^  ^^^^^^^^^ no `AdcConfig` in `analog::adc`
+   |                   |    |
+   |                   |    no `AdcCalCurve` in `analog::adc`
+   |                   no `Adc` in `analog::adc`
+   |
+help: a similar name exists in the module
+   |
+13 -     analog::adc::{Adc, AdcCalCurve, AdcConfig, Attenuation},
+13 +     analog::adc::{Adc, AdcCalSource, AdcConfig, Attenuation},
+   |
+
+error[E0433]: cannot find module or crate `nb` in this scope
+  --> src/bin/neg_lab04_adc_needs_unstable.rs:47:23
+   |
+47 |             sum_mv += nb::block!(adc.read_oneshot(&mut pin_mv)).unwrap() as u32;
+   |                       ^^ use of unresolved module or unlinked crate `nb`
+
+error[E0603]: module `analog` is private
+   --> src/bin/neg_lab04_adc_needs_unstable.rs:13:5
+    |
+ 13 |     analog::adc::{Adc, AdcCalCurve, AdcConfig, Attenuation},
+    |     ^^^^^^  --- module `adc` is not publicly re-exported
+    |     |
+    |     private module
+    |
+note: the module `analog` is defined here
+   --> /home/claude/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/esp-hal-1.1.1/src/lib.rs:236:13
+    |
+236 |               pub(crate) mod $module;
+    |               ^^^^^^^^^^^^^^^^^^^^^^^
+...
+333 | / unstable_module! {
+334 | |     pub mod asynch;
+335 | |     pub mod debugger;
+336 | |     pub mod rom;
+...   |
+353 | |     pub mod psram;
+354 | | }
+    | |_- in this macro invocation
+    = note: this error originates in the macro `unstable_module` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0603]: module `analog` is private
+   --> src/bin/neg_lab04_adc_needs_unstable.rs:13:5
+    |
+ 13 |     analog::adc::{Adc, AdcCalCurve, AdcConfig, Attenuation},
+    |     ^^^^^^ private module                      ----------- enum `Attenuation` is not publicly re-exported
+    |
+note: the module `analog` is defined here
+   --> /home/claude/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/esp-hal-1.1.1/src/lib.rs:236:13
+    |
+236 |               pub(crate) mod $module;
+    |               ^^^^^^^^^^^^^^^^^^^^^^^
+...
+333 | / unstable_module! {
+334 | |     pub mod asynch;
+335 | |     pub mod debugger;
+336 | |     pub mod rom;
+...   |
+353 | |     pub mod psram;
+354 | | }
+    | |_- in this macro invocation
+    = note: this error originates in the macro `unstable_module` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0603]: struct `ADC1` is private
+   --> src/bin/neg_lab04_adc_needs_unstable.rs:15:18
+    |
+ 15 |     peripherals::ADC1,
+    |                  ^^^^ private struct
+    |
+note: the struct `ADC1` is defined here
+   --> /home/claude/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/esp-hal-1.1.1/src/peripherals/mod.rs:28:11
+    |
+ 26 |           #[non_exhaustive]
+    |           ----------------- cannot be constructed because it is `#[non_exhaustive]`
+ 27 |           #[allow(non_camel_case_types, clippy::upper_case_acronyms)]
+ 28 |           $(#[$attr])*
+    |             ^^^^^^^^
+...
+175 | / for_each_peripheral! {
+176 | |     // Define stable peripheral singletons
+177 | |     (@peri_type $(#[$meta:meta])* $name:ident <= $from_pac:tt $interrupts:tt) => {
+178 | |         create_peripheral!( $(#[$meta])* $name <= $from_pac $interrupts);
+...   |
+277 | |     };
+278 | | }
+    | |_- in this macro invocation
+    = note: this error originates in the attribute macro `instability::unstable` which comes from the expansion of the macro `for_each_peripheral` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0616]: field `ADC1` of struct `Peripherals` is private
+  --> src/bin/neg_lab04_adc_needs_unstable.rs:38:40
+   |
+38 |     let mut adc = Adc::new(peripherals.ADC1, adc_config);
+   |                                        ^^^^ private field
+
+Some errors have detailed explanations: E0432, E0433, E0603, E0616.
+For more information about an error, try `rustc --explain E0432`.
+error: could not compile `esp32s3-labs` (bin "neg_lab04_adc_needs_unstable") due to 6 previous errors
+=== RESULT neg_lab04_adc_needs_unstable EXIT:101
+=== BUILD neg_lab05_ledc_needs_unstable
+   Compiling esp32s3-labs v0.1.0 (/home/claude/stable-check)
+error[E0433]: cannot find `ledc` in `esp_hal`
+   --> src/bin/neg_lab05_ledc_needs_unstable.rs:13:5
+    |
+ 13 |     ledc::{
+    |     ^^^^ could not find `ledc` in `esp_hal`
+    |
+note: found an item that was configured out
+   --> /home/claude/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/esp-hal-1.1.1/src/lib.rs:379:13
+    |
+251 |             #[cfg(feature = "unstable")]
+    |                   -------------------- the item is gated behind the `unstable` feature
+...
+379 |     pub mod ledc;
+    |             ^^^^
+
+error[E0432]: unresolved imports `esp_hal::delay`, `esp_hal::ledc`
+   --> src/bin/neg_lab05_ledc_needs_unstable.rs:11:5
+    |
+ 11 |     delay::Delay,
+    |     ^^^^^ could not find `delay` in `esp_hal`
+ 12 |     gpio::DriveMode,
+ 13 |     ledc::{
+    |     ^^^^ could not find `ledc` in `esp_hal`
+    |
+note: found an item that was configured out
+   --> /home/claude/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/esp-hal-1.1.1/src/lib.rs:369:13
+    |
+251 |             #[cfg(feature = "unstable")]
+    |                   -------------------- the item is gated behind the `unstable` feature
+...
+369 |     pub mod delay;
+    |             ^^^^^
+note: found an item that was configured out
+   --> /home/claude/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/esp-hal-1.1.1/src/lib.rs:379:13
+    |
+251 |             #[cfg(feature = "unstable")]
+    |                   -------------------- the item is gated behind the `unstable` feature
+...
+379 |     pub mod ledc;
+    |             ^^^^
+
+error[E0616]: field `LEDC` of struct `Peripherals` is private
+  --> src/bin/neg_lab05_ledc_needs_unstable.rs:31:42
+   |
+31 |     let mut ledc = Ledc::new(peripherals.LEDC);
+   |                                          ^^^^ private field
+
+Some errors have detailed explanations: E0432, E0433, E0616.
+For more information about an error, try `rustc --explain E0432`.
+error: could not compile `esp32s3-labs` (bin "neg_lab05_ledc_needs_unstable") due to 3 previous errors
+=== RESULT neg_lab05_ledc_needs_unstable EXIT:101
+=== ALLDONE

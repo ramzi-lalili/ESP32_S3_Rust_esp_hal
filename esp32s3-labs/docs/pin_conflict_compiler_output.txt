@@ -1,0 +1,13 @@
+error[E0382]: use of moved value: `peripherals.GPIO15`
+  --> src/bin/zz_conflict_demo.rs:12:28
+   |
+10 |     let _camera = reserve_camera_pins!(peripherals);
+   |                   --------------------------------- value moved here
+11 |     // GPIO15 is the camera XCLK pin, already moved into `_camera`:
+12 |     let _bad = Output::new(peripherals.GPIO15, Level::Low, OutputConfig::default());
+   |                            ^^^^^^^^^^^^^^^^^^ value used here after move
+   |
+   = note: move occurs because `peripherals.GPIO15` has type `GPIO15<'_>`, which does not implement the `Copy` trait
+
+For more information about this error, try `rustc --explain E0382`.
+error: could not compile `esp32s3-labs` (bin "zz_conflict_demo") due to 1 previous error

@@ -1,0 +1,34 @@
+rustc: rustc 1.95.0-nightly (95e5bda86 2026-04-15) (1.95.0.0)
+cargo: cargo 1.95.0-nightly (f2d3ce0bd 2026-03-21) (1.95.0.0)
+gcc: xtensa-esp-elf-gcc (crosstool-NG esp-16.1.0_20260609) 16.1.0
+RESULT lab00_hello rc=0 warnings=0 secs=2 size=39033 2416 404880
+RESULT lab01_gpio_output rc=0 warnings=0 secs=2 size=39609 2416 404880
+RESULT lab02_gpio_input rc=0 warnings=0 secs=2 size=40081 2460 404836
+RESULT lab03_cpu_clock rc=0 warnings=0 secs=2 size=41065 2416 404880
+RESULT lab04_adc rc=0 warnings=0 secs=3 size=41965 2416 404880
+RESULT lab05_ledc_pwm rc=0 warnings=0 secs=2 size=43909 2584 404712
+RESULT lab06_servo rc=0 warnings=0 secs=2 size=42517 2476 404820
+RESULT lab07_timer rc=0 warnings=0 secs=2 size=42645 2452 404844
+RESULT lab08_gpio_interrupt rc=0 warnings=0 secs=3 size=40969 2420 404876
+RESULT lab09_uart rc=0 warnings=0 secs=2 size=56157 2608 404688
+RESULT lab10_i2c_scan rc=0 warnings=0 secs=3 size=55113 7208 400088
+RESULT lab11_lcd1602 rc=0 warnings=0 secs=2 size=56385 7244 400052
+RESULT lab12_spi rc=0 warnings=0 secs=3 size=48217 7192 400104
+RESULT lab13_rc522 rc=0 warnings=0 secs=2 size=56461 7224 400072
+RESULT lab14_dma_mem2mem rc=0 warnings=0 secs=3 size=55209 2536 404760
+RESULT lab14b_spi_dma rc=0 warnings=0 secs=2 size=62333 7340 399956
+RESULT lab15_watchdog rc=0 warnings=0 secs=3 size=41501 2640 404656
+RESULT lab16_rmt_ws2812 rc=0 warnings=0 secs=2 size=47973 5040 402256
+RESULT lab17_pcnt_encoder rc=0 warnings=0 secs=2 size=43101 2524 404772
+RESULT lab18_mcpwm rc=0 warnings=0 secs=2 size=43625 2536 404760
+RESULT lab19_twai rc=0 warnings=0 secs=2 size=43669 2496 404800
+RESULT lab20_wifi rc=0 warnings=0 secs=9 size=491725 12548 525816
+RESULT lab21_ble rc=0 warnings=0 secs=12 size=322157 12984 394308
+RESULT lab22a_usb_serial_jtag rc=0 warnings=0 secs=2 size=32669 1936 405360
+RESULT lab22b_usb_otg_cdc rc=0 warnings=0 secs=5 size=71605 3792 403504
+RESULT lab23_embassy rc=0 warnings=0 secs=3 size=63061 4076 403216
+RESULT lab24_psram rc=0 warnings=0 secs=2 size=50041 2652 404644
+RESULT proj1_basic_monitor rc=0 warnings=0 secs=3 size=59389 7256 400040
+RESULT proj2_rfid_access rc=0 warnings=0 secs=3 size=69313 7352 399944
+RESULT proj3_iot_monitor rc=0 warnings=0 secs=10 size=521393 17332 521032
+ALLDONE

@@ -1,0 +1,65 @@
+[package]
+name = "esp32s3-labs"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
+description = "ESP32-S3 + Rust + esp-hal 1.1.1 laboratory manual: all lab sources"
+publish = false
+
+# ---------------------------------------------------------------------------
+# Core HAL stack. esp-hal is pinned with "=" so a newer 1.1.x/1.2.x release can
+# never be picked up silently (the manual is written for exactly 1.1.1).
+# ---------------------------------------------------------------------------
+[dependencies]
+esp-hal = { version = "=1.1.1", features = ["esp32s3", "unstable", "log-04"] }
+esp-bootloader-esp-idf = { version = "0.5.0", features = ["esp32s3", "log-04"] }
+esp-println = { version = "0.17.0", features = ["esp32s3", "log-04"] }
+esp-backtrace = { version = "0.19.0", features = ["esp32s3", "panic-handler", "println"] }
+esp-alloc = "0.10.0"
+log = "0.4.27"
+critical-section = "1.2.0"
+nb = "1.1.0"
+static_cell = "2.1.1"
+heapless = "0.9.0"
+
+# embedded-hal ecosystem (traits implemented by esp-hal drivers)
+embedded-hal = "1.0.0"
+embedded-hal-async = "1.0.0"
+embedded-hal-bus = "0.3.0"
+embedded-io-async = "0.7.0"
+
+# Embassy + RTOS glue (async labs, Wi-Fi, BLE, USB)
+esp-rtos = { version = "0.3.0", features = ["esp32s3", "embassy", "esp-radio", "esp-alloc", "log-04"] }
+esp-radio = { version = "0.18.0", features = ["esp32s3", "wifi", "ble", "coex", "esp-alloc", "unstable", "log-04"] }
+embassy-executor = { version = "0.10.0", features = ["log"] }
+embassy-time = { version = "0.5.0", features = ["log"] }
+# trouble-host 0.6.0 is built against embassy-sync 0.7 and its #[gatt_server] macro resolves
+# the name through THIS crate: a different version here gives a NoopRawMutex trait error.
+embassy-sync = "0.7.2"
+embassy-futures = "0.1.2"
+embassy-net = { version = "0.9.1", features = ["tcp", "udp", "dhcpv4", "medium-ethernet", "log"] }
+embassy-usb = { version = "0.6.0", default-features = false }
+trouble-host = { version = "0.6.0", features = ["gatt", "default-packet-pool-mtu-255", "derive", "scan"] }
+bt-hci = "0.8.0"
+
+# maths for the NTC thermistor (no_std ln)
+libm = "0.2.11"
+
+# RFID
+mfrc522 = "0.8.0"
+
+[features]
+# Lab 03: select the CPU clock preset at build time.
+clk-80 = []
+clk-160 = []
+clk-240 = []
+
+[profile.dev]
+# The default debug profile is too slow and too big for resource-constrained devices.
+opt-level = "s"
+
+[profile.release]
+codegen-units = 1 # LLVM can perform better optimizations using a single thread
+debug = 2         # prefer slower builds but better debugging experience
+lto = 'fat'
+opt-level = 's'
